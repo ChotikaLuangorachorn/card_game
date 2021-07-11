@@ -13,7 +13,7 @@
 2. Run `python -m venv env`
 3. Run `source env/bin/activate` for MacOS
 4. Run `pip install -r src/requirements.txt`
-5. Run `uvicorn main:app --reload`
+5. Run `uvicorn src.main:app --reload`
 6. Access the API docs using http://127.0.0.1:8000/docs
 
 ## Directory Structure
