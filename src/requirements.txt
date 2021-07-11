@@ -1,0 +1,6 @@
+
+fastapi[all]
+python-jose[cryptography]
+passlib[bcrypt]
+uvicorn[all]
+pydantic[all]
