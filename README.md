@@ -7,3 +7,16 @@
 4. Run docker-compose build
 5. Run docker-compose up
 6. Access api using http://0.0.0.0:8000/docs
+
+## Directory Structure
+* src
+  * model
+    * game.py
+    * token.py
+    * user.py
+  * Dockerfile
+  * authentication.py
+  * database.py
+  * game.py
+  * main.py
+  * requirements.txt
