@@ -106,10 +106,6 @@ def open_and_check_card(card_id: int,user: User,  game_info: GameInDB):
         game_detail['is_match_first_card'] = True
     game_detail['cards'] =  cards
     game_detail['opened_cards']= opened_cards
-    
-    print(cards)
-    print()
-    print(game_detail['opened_cards'])
 
     return {"cards": temp_cards}
 
@@ -136,6 +132,10 @@ async def open_card(card_id: int, current_user: User = Depends(get_current_activ
     if card_id < 1 or card_id > 12:
         raise HTTPException(status_code= status.HTTP_400_BAD_REQUEST, detail="Invalid card id")
     game_info = GameInDB(**game_db[current_user.username])
+    cards = game_info.cards
+    if cards == []:
+        start_new_game(game_db, current_user)
+        game_info = GameInDB(**game_db[current_user.username])
     return open_and_check_card(card_id, current_user,game_info)
 
 @game_router.get('/click')
