@@ -20,3 +20,23 @@
   * game.py
   * main.py
   * requirements.txt
+
+## API Description
+1. default 
+   * / 
+   * /users/me -> used to view user information
+2. authentication 
+   * /token -> used for requesting token
+3. game 
+   * /game/new_game -> used for starting a new game
+   * /game/play_game -> used to start playing game
+   * /game/open_card/{card_id} -> used for opening or selecting card
+   * /game/click -> used for checking the number of clicks
+   * /game/scores/all -> used for checking all scores that have been played
+   * /game/scores/my_latest -> used for checking the latest score.
+   * /game/scores/my_best -> used for checking the best score.
+
+## Authentication
+You can use username and password as follows.
+> username: test  
+password: test
