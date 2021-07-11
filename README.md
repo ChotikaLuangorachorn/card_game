@@ -23,18 +23,18 @@
 
 ## API Description
 1. default 
-   * / 
-   * /users/me -> used to view user information
+   * `/` 
+   * `/users/me` -> used to view user information
 2. authentication 
-   * /token -> used for requesting token
+   * `/token` -> used for requesting token
 3. game 
-   * /game/new_game -> used for starting a new game
-   * /game/play_game -> used to start playing game
-   * /game/open_card/{card_id} -> used for opening or selecting card
-   * /game/click -> used for checking the number of clicks
-   * /game/scores/all -> used for checking all scores that have been played
-   * /game/scores/my_latest -> used for checking the latest score.
-   * /game/scores/my_best -> used for checking the best score.
+   * `/game/new_game` -> used for starting a new game
+   * `/game/play_game` -> used to start playing game
+   * `/game/open_card/{card_id}` -> used for opening or selecting card
+   * `/game/click` -> used for checking the number of clicks
+   * `/game/scores/all` -> used for checking all scores that have been played
+   * `/game/scores/my_latest` -> used for checking the latest score.
+   * `/game/scores/my_best` -> used for checking the best score.
 
 ## Authentication
 You can use username and password as follows.
@@ -42,10 +42,10 @@ You can use username and password as follows.
 password: test
 
 ## How to play games on the API Docs
-1. Login authentication by click the authorize button
-![Authorize Button](./images/authorize01.png)
+1. Login authentication by click the authorize button  
+![Authorize Button](./images/authorize01.png)  
 2. Fill in the username and password 
-![Authorize Form](./images/authorize02.png)
+![Authorize Form](./images/authorize02.png)  
 3. Use `/game/play_game` to start the game
 4. Use `/game/open_card/{card_id}` to open or select one card
    * Response will show value of card you opened or selected
@@ -53,5 +53,5 @@ password: test
    * You cannot open or select cards that show their values
 5. Use `/game/new_game` to start the new game or restart game
 6. Use `/game/click` to check your click count
-7. Use `/game/scores/all`, `/game/scores/my_latest` or `/game/scores/my_best` to check your scores
+7. Use `/game/scores/all`, `/game/scores/my_latest` or `/game/scores/my_best` to check your scores   
 ![Game](./images/game_api.png)
