@@ -1,12 +1,20 @@
 # card_game
 
-## Deployment Step
+## Deployment Step on Docker
 1. Install Docker and start Docker
 2. Clone this github repository (https://github.com/chotikalu/card_game.git)
 3. Go to /card_game
 4. Run `docker-compose build`
 5. Run `docker-compose up`
 6. Access the API docs using http://0.0.0.0:8000/docs
+
+## Deployment Step on Virtual Environment
+1. Run `python -m pip install virtualenv`
+2. Run `python -m venv env`
+3. Run `source env/bin/activate` for MacOS
+4. Run `pip install -r src/requirements.txt`
+5. Run `uvicorn main:app --reload`
+6. Access the API docs using http://127.0.0.1:8000/docs
 
 ## Directory Structure
 * src
@@ -55,3 +63,7 @@ password: test
 6. Use `/game/click` to check your click count
 7. Use `/game/scores/all`, `/game/scores/my_latest` or `/game/scores/my_best` to check your scores   
 ![Game](./images/game_api.png)
+
+
+## Run Unit Test on Virtual Environment
+* Run `python -m unittest test_card_game`
